@@ -6,7 +6,6 @@ I rebuilt the layout using **HTML, CSS**, and **React** for fun, practicing stru
 <div align="center">
   <img width="607" height="1142" alt="Screenshot 2025-11-30 at 4 04 19 PM" src="https://github.com/user-attachments/assets/bc5f9322-00e8-4e25-95e3-05455fbff596" />
 </div>
----
 
 ## ✨ Overview
 
