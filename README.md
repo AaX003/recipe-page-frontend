@@ -1,10 +1,11 @@
 # 🌸 Simple Omelette Recipe Card — Pastel Edition  
 
 This is my solution to the **Frontend Mentor – Recipe Page challenge**, recreated in a soft pastel theme to match my personal style!  
-I rebuilt the layout using **HTML, CSS**, and a **React version** for fun, practicing structure, responsive design, and custom theming.
+I rebuilt the layout using **HTML, CSS**, and **React** for fun, practicing structure, responsive design, and custom theming.
 
-<img width="607" height="1142" alt="Screenshot 2025-11-30 at 4 04 19 PM" src="https://github.com/user-attachments/assets/bc5f9322-00e8-4e25-95e3-05455fbff596" />
-
+<div align="center">
+  <img width="607" height="1142" alt="Screenshot 2025-11-30 at 4 04 19 PM" src="https://github.com/user-attachments/assets/bc5f9322-00e8-4e25-95e3-05455fbff596" />
+</div>
 ---
 
 ## ✨ Overview
