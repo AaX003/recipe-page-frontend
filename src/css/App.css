@@ -1,0 +1,270 @@
+/* fonts */
+@font-face {
+  font-family: 'YoungSerif-Regular';
+  src: url('../assets/fonts/YoungSerif-Regular.ttf');
+}
+@font-face {
+  font-family: 'Outfit-Variable';
+  src: url('../assets/fonts/Outfit-VariableFont_wght.ttf');
+}
+
+/* layout + base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: #ffdde9;
+  --title-accent: #e37baf;
+  --text-accent: #e7549e;
+  --muted: #2929299b;
+  --bullet-accent: #fc62af;
+  --border: 1px dashed #ff96cb;
+  --table-border: 1px solid pink;
+}
+
+/* body layout */
+body {
+  background: var(--main-bg);
+  padding: 1.9rem;
+  font-family: 'Outfit-Variable', system-ui, -apple-system;
+}
+
+/* container */
+
+.container { 
+  position: relative;
+  margin: 0 auto;
+  background: #ffffff; 
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 740px;
+}
+
+/* image section */
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.img-wrapper img {
+  width: 100%;
+  max-width: 740px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* titles */
+
+.main .title,
+.ingredients-wrapper .title,
+.instructions-wrapper .title,
+.nutrition-wrapper .title {
+  font-family: 'YoungSerif-Regular';
+}
+
+.main .title,
+.preparation-wrapper .title, 
+.instructions-wrapper .title, 
+.ingredients-wrapper .title, 
+.nutrition-wrapper .title {
+  color: var(--title-accent);
+}
+
+.main .title {
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px #793363fe;
+}
+
+/* subtitles + info */
+.preparation-wrapper li,
+.ingredients-wrapper li,
+.instructions-wrapper li,
+.nutrition-wrapper li {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.preparation-wrapper li strong,
+.instructions-wrapper strong {
+  color: var(--text-accent);
+}
+
+/* preparation section */
+
+.preparation-wrapper .title {
+  font-family: 'Outfit-Variable';
+  margin: 2%;
+}
+
+.preparation-wrapper,
+.nutrition-info {
+  background: #FFF7FC;
+  border: var(--border);
+  padding: .55rem;
+  border-radius: 10px;
+}
+
+.preparation-wrapper strong {
+  color: rgb(54, 54, 54);
+}
+
+/* bullet customization via ::marker pseduo element */
+
+.preparation-wrapper li::marker,
+.ingredients-wrapper li::marker,
+.instructions-wrapper li::marker {
+  color:var(--bullet-accent);
+  font-weight: 600;
+}
+
+.info {
+  line-height: 2;
+}
+
+.main .subtitle,
+.nutrition-wrapper .subtitle {
+  font-family: 'Outfit-Variable';
+}
+
+/* nutrition section */
+
+.nutrition-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  border: none;
+  background: #fffafa;
+}
+
+.nutrition-info li {
+  display: flex;
+  padding: 1rem;
+  border-bottom: var(--table-border);
+  border-radius: 12px;
+}
+
+.text {
+  margin-right: auto;
+  font-weight: 600;
+  color:var(--muted);
+}
+
+.value {
+  font-weight: 600;
+  color:var(--text-accent);
+}
+
+/* divider */
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(231, 127, 195, 0.171);
+  width: 100%;
+}
+
+/* minimal attribution */
+
+.attribution {
+  margin-top: 2%;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.attribution a {
+  font-weight: 700;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+/* responsiveness */
+
+@media (max-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-self: center;
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    display: flex; flex-direction: column;
+    justify-content: center; place-self: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  .main .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    display: flex; flex-direction: column;
+    justify-content: center; place-self: center;
+    width: 100%;
+    max-width: 420px;
+  }
+  .main .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .main .title {
+    font-size: 17px;
+  }
+  .main .subtitle {
+    font-size: 15px;
+    text-wrap: balance;
+    max-width: 45ch;
+  }
+  .preparation-wrapper .title,
+  .ingredients-wrapper .title,
+  .instructions-wrapper .title,
+  .nutrition-wrapper .title {
+    font-size: 16px;
+  }
+
+  .main .subtitle,
+  .nutrition-wrapper .subtitle {
+    font-size: 12px;
+  }
+
+  .preparation-wrapper li,
+  .ingredients-wrapper li,
+  .instructions-wrapper li,
+  .nutrition-info li {
+    font-size: 12px;
+  }
+}
